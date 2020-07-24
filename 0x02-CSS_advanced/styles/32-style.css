@@ -441,7 +441,7 @@ ul.row {
     width: 50%;
 }
 
-[class^="col-"] {
+div[class^="col-"] {
     float: left;
     padding: .5rem;
 }
@@ -501,7 +501,7 @@ ul.row {
     text-align: center;
 }
 
-.card-avatar {
+.card-testimonial .card-avatar {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
