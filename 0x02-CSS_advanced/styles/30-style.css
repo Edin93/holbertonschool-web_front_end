@@ -189,7 +189,7 @@ template {
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
-    --text-color: var(--color-white);
+    --text-color: var(--color-black);
     --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
@@ -205,7 +205,7 @@ template {
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
-    --section-title-color: var(--color-white);
+    --section-title-color: var(--color-black);
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
@@ -218,23 +218,8 @@ template {
     --nav-item-letter-spacing: .04rem;
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem;
-    --nav-item-link-hover: var(--color-white);
+    --nav-item-link-hover: var(--color-primary);
     --section-tagline-margin: 0;
-    --button-display: inline-block;
-    --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black);
-    --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
-    --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
-    --header-padding: 4rem 0 0;
-    --header-logo-position: relative;
-    --header-logo-link-display: inline-block;
-    --header-logo-link-position: absolute;
-    --header-logo-link-top: -1rem;
-    --header-logo-link-left: 0;
 }
 
 * {
@@ -279,21 +264,6 @@ a:hover {
 
 a:active {
     background-color: var(--color-light-grey);
-}
-
-.button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
-}
-
-.button:hover {
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);
 }
 
 .visually-hidden {
@@ -376,21 +346,6 @@ a:active {
     color: var(--nav-item-link-hover);
 }
 
-.nav .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: .2rem;
-}
-
-.nav .nav-item:hover nav-link::before {
-    background-color: var(--color-primary);
-    width: 100%;
-}
-
 ul.row {
     margin: 0;
     padding: 0;
@@ -426,96 +381,119 @@ ul.row {
     clear: both;
 }
 
+top: 0;
+left: 0;
+background-color: var(--color-white);
+width: 0;
+height: .2rem;
+
+}
+.nav .nav-item:hover nav-link::before {
+    background-color: var(--color-primary);
+    width: 100%;
+}
+ul.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.col-1-3 {
+    width: 33.33%;
+}
+.col-1-2 {
+    width: 50%;
+}
+[class^="col-"] {
+    float: left;
+    padding: .5rem;
+}
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+.footer ul {
+    text-align: right;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 [data-section-theme="dark"] {
     background: var(--color-black);
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
     --button-color: var(--color-white);
 }
-
 .footer-address {
     color: var(--text-color);
 }
-
 .social-link {
     display: block;
 }
-
 .social-link svg {
     fill: var(--text-color);
 }
-
 .card-services .card-title {
     margin: 0;
 }
-
 .card-services a {
     display: block;
     padding: 2rem;
     background-color: var(--color-light-grey);
 }
-
 .card-services a:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
     text-decoration: none;
 }
-
 .card-testimonial {
     text-align: center;
 }
-
 .card-avatar {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
 }
-
 .card-testimonial .card-quote cite {
     display: block;
     padding-top: 1rem;
     color: var(--color-primary);
 }
-
 .section-hero {
     background-size: auto auto;
     width: 90rem;
     height: auto;
 }
-
 .section-hero .section-title {
     margin-bottom: 5rem;
 }
-
 .section-hero .section-inner {
     padding: 10rem 40rem 2rem 0;
 }
-
 .header {
     padding: var(--header-padding);
 }
-
 .header-logo {
     position: var(--header-logo-position);
 }
-
 .header-logo a {
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-position);
     top: var(--header-logo-link-top);
     left: var(--header-logo-link-left);
 }
-
 .card-work .card-outer {
     position: relative;
     overflow: hidden;
 }
-
 .card-work .card-image img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
     vertical-align: bottom;
 }
-
 .card-work .card-inner {
     position: absolute;
     top: -0.1rem;
@@ -523,11 +501,9 @@ ul.row {
     right: -0.1rem;
     z-index: 1;
 }
-
 .card-work:hover .card-inner {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
 .card-work .card-title {
     text-align: center;
     margin: 0;
@@ -535,13 +511,11 @@ ul.row {
     height: 100%;
     position: relative;
 }
-
 .card-work .card-title a {
     display: block;
     text-decoration: none;
     padding-top: 45%;
 }
-
 .card-work .card-title a::after {
     position: absolute;
     top: 0;
@@ -550,7 +524,6 @@ ul.row {
     bottom: 0;
     content: "";
 }
-
 .card-work:hover .card-title {
     opacity: 1;
 }

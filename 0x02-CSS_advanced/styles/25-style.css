@@ -189,7 +189,7 @@ template {
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
-    --text-color: var(--color-white);
+    --text-color: var(--color-black);
     --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
@@ -205,7 +205,7 @@ template {
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
-    --section-title-color: var(--color-white);
+    --section-title-color: var(--color-black);
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
@@ -220,15 +220,6 @@ template {
     --nav-item-margin: 0 0 3rem;
     --nav-item-link-hover: var(--color-primary);
     --section-tagline-margin: 0;
-    --button-display: inline-block;
-    --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black);
-    --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
-    --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
 }
 
 * {
@@ -273,21 +264,6 @@ a:hover {
 
 a:active {
     background-color: var(--color-light-grey);
-}
-
-.button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
-}
-
-.button:hover {
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);
 }
 
 .visually-hidden {
@@ -405,8 +381,35 @@ ul.row {
     clear: both;
 }
 
+.col-1-2 {
+    width: 50%;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: .5rem;
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+.footer ul {
+    text-align: right;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 [data-section-theme="dark"] {
     background: var(--color-black);
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
     --button-color: var(--color-white);
 }
 
