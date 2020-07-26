@@ -221,8 +221,8 @@ template {
     --nav-item-link-hover: var(--color-primary);
 }
 
-* {
-    box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 html {

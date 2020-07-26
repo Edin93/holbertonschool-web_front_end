@@ -231,8 +231,8 @@ template {
     --button-hover-background: var(--color-primary);
 }
 
-* {
-    box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 html {
