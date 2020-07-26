@@ -598,7 +598,7 @@ div[class^="col-"] {
 }
 
 .card-testimonial .card-quote::before {
-    content: "\201c";
+    content: "\201C";
     position: absolute;
     top: -4.5rem;
     left: -1rem;
