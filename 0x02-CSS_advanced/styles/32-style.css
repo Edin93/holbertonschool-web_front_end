@@ -254,12 +254,12 @@ body {
     line-height: var(--line-height-base);
 }
 
-section h1,
-section h2,
-section h3,
-section h4,
-section h5,
-section h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
 }
