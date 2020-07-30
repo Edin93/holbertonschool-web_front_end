@@ -1,13 +1,13 @@
 /* My Style */
-@mixin elem-style {
-    margin-left: 15px;
-    margin-right: 15px;
+@mixin elem-style($pixels) {
+    margin-left: #{$pixels}px;
+    margin-right: #{$pixels}px;
 }
 
 body {
-    @include elem-style;
+    @include elem-style(10);
 }
 
 div {
-    @include elem-style;
+    @include elem-style(15);
 }
