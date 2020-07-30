@@ -1,0 +1,6 @@
+/* My Style */
+@for $i from 1 through 4 {
+    .col-#{$i} {
+	width: 1/$i * 100%;
+    }
+}
