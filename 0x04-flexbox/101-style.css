@@ -12,11 +12,11 @@
 .container {
   width: 80%;
   height: 400px;
-  margin: 30px auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .box {
