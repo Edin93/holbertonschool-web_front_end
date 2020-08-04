@@ -25,35 +25,40 @@
   width: fit-content;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 
 .box1 {
   background-color: yellowgreen;
   flex-grow: 1;
-  font-size: 3rem;
+  font-size: 2rem;
+  min-height: 5rem;
 }
 
 .box2 {
   background-color: blue;
   flex-grow: 2;
-  font-size: 6rem;
+  font-size: 5rem;
+  min-height: 7.5rem;
 }
 
 .box3 {
   background-color: teal;
   flex-grow:3;
-  font-size: 10rem;
+  font-size: 8rem;
+  min-height: 11rem;
 }
 
 .box4 {
   background-color: palevioletred;
   flex-grow: 2;
-  font-size: 6rem;
+  font-size: 5rem;
+  min-height: 7.5rem;
 }
 
 .box5 {
   background-color: orange;
   flex-grow: 1;
-  font-size: 3rem;
+  font-size: 2rem;
+  min-height: 5rem;
 }
