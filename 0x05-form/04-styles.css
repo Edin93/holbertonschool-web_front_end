@@ -691,7 +691,7 @@ input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 1.2rem;
   line-height: 1;
-  border: .1rem solid var(--color-black);
+  border: 0.1rem solid var(--color-black);
   background-color: var(--color-white);
   box-shadow: none;
   outline: 0;
@@ -702,7 +702,7 @@ input[type="text"], input[type="email"] {
 }
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-  border: .1rem solid var(--color-grey);
+  border: 0.1rem solid var(--color-grey);
   background-color: var(--color-light-grey);
 }
 
