@@ -656,14 +656,9 @@
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
-  .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
   .card-work .card-title {
     text-align: center;
     margin: 0;
-    opacity: 0;
     height: 100%;
     position: relative;
   }
@@ -672,6 +667,7 @@
     display: block;
     text-decoration: none;
     padding-top: 45%;
+    opacity: 0;
   }
   
   .card-work .card-title a::after {
@@ -683,8 +679,10 @@
     content: '';
   }
   
-  .card-work:hover .card-title {
+  .card-work .card-title a:focus {
     opacity: 1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
   }
   
   @media only screen and (max-width: 767px) {
