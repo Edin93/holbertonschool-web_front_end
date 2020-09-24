@@ -16,7 +16,7 @@ let queryWikipedia = function() {
             response = JSON.parse(req.response).query.pages[21721040].extract;
             createElement(response);
         }
-      }
+    }
 };
 
 queryWikipedia(createElement);
