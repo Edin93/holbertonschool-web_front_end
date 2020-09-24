@@ -9,19 +9,19 @@
     <body>
     </body>
     <script type="application/javascript">
-        function createTextElement() {
+        function createFamilyTree() {
             let rows = [
                 ['Guillaume', 'Salva'],
                 ['Paulette', 'Salva'],
                 ['Antoine', 'Salva']
             ];
-            let table = $('<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead></table>');
+            let table = '<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead><tbody>';
             for (let i = 0; i < rows.length; i++) {
-                let row = `<tr><td>${rows[i][0]}</td><td>${rows[i][1]}</td></tr>`;
-                table.append(row);
+                table += `<tr><td>${rows[i][0]}</td><td>${rows[i][1]}</td></tr>`;
             }
+            table += '</tbody></table>';
             $('body').append(table);
         }
-        createTextElement();
+        createFamilyTree();
     </script>
 </html>
