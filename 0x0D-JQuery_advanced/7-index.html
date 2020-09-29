@@ -42,7 +42,6 @@
                     format: 'json',
                 },
                 success: function(response) {
-                    console.log(response);
                     let data = response.query.search;
                     for (let i = 0; i < data.length; i++) {
                         addNewArticle(data[i].pageid, data[i].title, data[i].snippet);
