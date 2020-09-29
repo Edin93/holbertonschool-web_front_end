@@ -18,8 +18,6 @@
 
     <script type="application/javascript">
 
-        // let form = document.getElementsByTagName('form');
-
         function setCookies() {
             let fnameInput = document.getElementById('fname-input');
             let emailInput = document.getElementById('email-input');
@@ -52,10 +50,12 @@
         }
 
         function showForm() {
-            let welcomeMsg = document.getElementsByTagName('H1');
+            let welcomeMsg = document.getElementsByTagName('H1')[0];
             let form = document.getElementsByTagName('form');
 
             if (welcomeMsg) {
+                console.log('welcomemsg:');
+                console.log(welcomeMsg);
                 welcomeMsg.remove();
             }
             form[0].style.display = 'block';
