@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cookies task</title>
+    </head>
+    <body>
+        <h1>Login to the website</h1>
+        <input id="fname-input" type="text" placeholder="Firstname">
+        <input id="email-input" type="email" placeholder="Email">
+        <button onclick="setCookies()">Log me in</button>
+        <h1>Cookies</h1>
+        <button onclick="showCookies()">Show the cookies</button>
+    </body>
+    <script type="application/javascript">
+        
+        function setCookies() {
+            let fnameInput = document.getElementById('fname-input');
+            let emailInput = document.getElementById('email-input');
+            let d = new Date();
+            d.setTime(d.getTime() + (10 * (24*60*60*1000) ));
+            
+            document.cookie = `firstname=${fnameInput.value};`;
+            document.cookie = `email=${emailInput.value};`;
+            document.cookie = `expires=${d};`;
+        }
+
+        function showCookies() {
+            let p = document.createElement('p');
+            p.innerHTML = `Cookies: ${decodeURIComponent(document.cookie)};`;
+            document.body.append(p);
+        }
+
+    </script>
+</html>
