@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cookies task</title>
+    </head>
+    <body>
+    </body>
+    <script type="application/javascript">
+
+        let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+        if (typeof(Storage) !== undefined) {
+            createStore();
+            displayCart();
+        } else {
+            alert("Sorry, your browser does not support Web storage. Try again with a better one");
+        }
+
+        function addItemToCart(item) {
+            sessionStorage.setItem(item, true);
+        }
+
+        function createStore() {
+            let ul = document.createElement('ul');
+
+            for (let i = 0; i < availableItems.length; i++) {
+                let item = document.createElement('li');
+                item.onclick = function () {
+                    addItemToCart(availableItems[i]);
+                }
+                item.appendChild(document.createTextNode(availableItems[i]));
+                ul.appendChild(item);
+            }
+            document.body.append(ul);
+        }
+
+        function displayCart() {
+            if (sessionStorage.length) {
+                let p = document.createElement('p');
+                p.innerHTML = `You previously had ${sessionStorage.length} items in your cart`;
+                document.body.append(p);
+            }
+        }
+
+    </script>
+</html>
