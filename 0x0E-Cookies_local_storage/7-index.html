@@ -107,8 +107,9 @@
                 ul.appendChild(li);
             } else {
                 let li = document.createElement('LI');
-
-                li.appendChild(document.createTextNode(`<span onclick="clearCart()">Clear your cart</span>`));
+                let span = document.createElement('SPAN');
+                span.innerHTML = `<span onclick="clearCart()">Clear your cart</span>`;
+                li.appendChild(span);
                 ul.appendChild(li);
 
                 for (const [k, v] of Object.entries(cart)) {
@@ -124,7 +125,7 @@
                     ul.appendChild(li);
                 }
             }
-            
+
             if (!document.getElementsByTagName('UL')[1]) {
                 div.appendChild(ul);
             }
