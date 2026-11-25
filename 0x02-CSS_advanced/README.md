@@ -27,4 +27,4 @@
 * Your code should be W3C compliant and validate with W3C-Validator
 
 ## Expected output
-[!smile-school.jpeg](smile-school.jpeg)
+![Expected final output](smile-school.jpg)
